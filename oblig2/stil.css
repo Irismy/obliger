@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 body {
@@ -8,23 +9,42 @@ body {
 
 #maincontainer {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-gap: 15px;
-    grid-template-rows: 33% 33% 33%;
-    align-content: */
+    grid-template-rows: auto minmax(150px 200px) 50px;
 
 }
 
 header {
     grid-column: 1/-1;
-    background-image:url(bilder/bakgrunn.jpg);
+    width: 100%;
+    height: 150px;
+    background-image:url(../bilder/bakgrunn.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 aside {
+    grid-column: 2/-1;
+    grid-row: auto; 
     display: flex;
     flex-direction: column;
+    border-left: solid darkslategray 1px;
+
+}
+.asideSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    width: 80%;
+}
+
+section> iframe {
+    width: 80%;
+    margin: 2rem auto;
 }
 
 h1 {
@@ -41,30 +61,58 @@ Nav {
     display: flex;
     justify-content: flex-start;
     background-color: #000;
+    width: 100%;
 }
 
 nav a {
+    display: flex;
+    justify-content: flex-start;
     color: antiquewhite;
     font-weight: 600;
     text-decoration: none;
     padding: 1em 2em;
 }
 
-figure {
-    size: 80%;
-}
-
-img {
-    size: 100%;
-}
-
 main {
-    max-width: 1000px;
+    grid-column: 1/2;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
+
+
 }
 .forsideArtikkel {
     display: flex;
     flex-direction: column;
+    max-width: 50%;
+    justify-content: space-between;
+    margin-top: 3rem;
 
 }
+
+.forsideArtikkelBilder {
+    width: 80%;
+}
+
+article p {
+    padding: 30px 20px;
+}
+
+article figure {
+    width: 80%;
+}
+
+figure>img {
+    width: 100%;
+}
+
+footer {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+
