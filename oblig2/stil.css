@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 80%;
+}
+
+#maincontainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 15px;
+    grid-template-rows: 33% 33% 33%;
+    align-content: */
+
+}
+
+header {
+    grid-column: 1/-1;
+    background-image:url(bilder/bakgrunn.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+}
+
+Nav {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #000;
+}
+
+nav a {
+    color: antiquewhite;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 1em 2em;
+}
+
+figure {
+    size: 80%;
+}
+
+img {
+    size: 100%;
+}
+
+main {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+}
+.forsideArtikkel {
+    display: flex;
+    flex-direction: column;
+
+}
