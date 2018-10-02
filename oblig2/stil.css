@@ -22,6 +22,7 @@ header {
     background-image:url(../bilder/bakgrunn.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
+    border-radius: 6px;
 }
 
 aside {
@@ -42,31 +43,40 @@ aside {
     width: 80%;
 }
 
+section>a{
+    padding: 5px 10px;
+    border: solid darkslategray 1px;
+    border-radius: 6px 6px;
+}
+
 section> iframe {
     width: 80%;
-    margin: 2rem auto;
+    margin: 0 auto;
 }
 
 h1 {
     display: flex;
     justify-content: center;
+    color: antiquewhite;
+    padding: 3rem auto;
 }
 
 h3 {
     display: flex;
     justify-content: center;
+    margin: 2rem 0;
 }
 
-Nav {
+header nav {
     display: flex;
     justify-content: flex-start;
     background-color: #000;
     width: 100%;
 }
 
-nav a {
-    display: flex;
-    justify-content: flex-start;
+nav>a {
+   /* display: flex;
+    justify-content: flex-start;*/
     color: antiquewhite;
     font-weight: 600;
     text-decoration: none;
@@ -88,6 +98,9 @@ main {
     max-width: 50%;
     justify-content: space-between;
     margin-top: 3rem;
+    border: solid 1px darkslategray;
+    border-radius: 6px;
+    
 
 }
 
@@ -111,8 +124,14 @@ footer {
     grid-column: 1/-1;
     display: flex;
     justify-content: space-around;
+    background-color: #000;
+    color: antiquewhite;
+    height: 50px;
+    border-radius: 6px;
 
 }
 
-
+footer>p {
+    margin: auto 0;
+}
 
