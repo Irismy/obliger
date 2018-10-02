@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" media="print" href="print.css">
+    <link rel="stylesheet" media = "all" href="stil.css" type="text/css">
+
+    <title>webutvikling</title>
+</head>
+<body>
+    <header>
+        <h1>Webutvikling</h1>
+        <nav>
+            <a href="../index.html">Hjem</a>
+            <a href="git.html">Git/Github</a>
+            <a href="mediatyper.html">Mediatyper</a>
+            <a href="layouts.html">CSS Layouts</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Litt historikk</h2>
+            <p>Tidligere kunne HTML-elementet table (tabell) i noen tilfeller bli brukt til å strukturere layout på nettsider. Dette er ikke i henhold til semantisk HTML og heller ikke en særlig elegant løsning. Teknikken er ikke særlig fleksibel, men det deler dokumentet inn i rader og kolonner. Men dette er ikke en god måte å dele inn dokumentet på ettersom table i utgangspunktet ikke skal brukes  til annet enn å vise tabulære data.</p>
+            <p>Før grid og flex-box ble en del av CSS, var float den beste løsningen for å strukturere layout. Float er en egenskap for posisjonering som lar elementer flyte i forhold til hverandre. Eksempelvis hvis du lar et bilde flyte til høyre eller venstre i en paragraf vil teksten legge seg rundt bildet, i stedet for akkurat der i teksten bildet settes inn. </p>
+            <p>Elementer med egenskapen float fortsetter å være en del av flyten på websiden. I motsetning til elementer som har absolutt posisjonering – absolutt posisjonerte elementer fjernes fra flyten på websiden. Elementer med absolutt posisjon påvirker ikke posisjonen til andre elementer og andre elementer påvirker ikke dem, enten de er nær hverandre eller ikke. Med float vil elementene tilpasse seg dersom størrelse eller innhold endrer seg. Hvis du ikke ønsker at andre elementer skal bli med i flyten kan du gi dem egenskapen clear som betyr at den holder seg nedenfor flyten og ikke blir med opp i ledige rom.</p>
+            <p>Dersom et foreldreelement kun inneholder elementer med float-egenskaper vil ikke foreldreelementet kjenne innholdet sitt lenger og kollapse. Metoden krever en del wrapper-containere for å få elementer til å legge seg fint i forhold til hverandre, og kanskje også noen hacks for å få layouten til å bli virkelig bra. </p>
+        </article>
+
+        <article>
+            <h2>Flexbox</h2>
+            <p>Flexbox løser noen vanlige utfordinger i forbindelse med float-baserte layouts. Med flexbox har du mulighet til å vertikalt sentrere et element – noe som ikke er mulig uten hacks når du bruker float. Når du gjør et element til en flexbox-container ved hjelp av display: flex blir alle direkte barn av dette elementet automatisk flexbox-elementer, og vil som standard legge seg på en horisontal linje i containeren.</p>
+            <p>Med flexbox trenger du ikke hensynta hvor mange elementer du har når du skal legge ut elementer horisontalt og fordele de jevnt. Med egenskapene justify-content kan du fordele barne-elementene slik du ønsker. Space-between gir for eksempel jevne mellomrom, men de legger seg allikevel helt ut til sidene. Dersom egenskapen flex-wrap settes til wrap sørger dette for at elementet automatisk hopper til neste linje dersom det ikke lenger er plass.</p>
+            <p>Containeren oppfører seg som et block-element om display er satt til flex, og som et inline-element dersom det settes til inline-flex. Tilsvarende block og inline-block. Når du flexer et element får du to akser å hensynta – hovedaksen og kryssaksen. Hovedaksen går i den retningen du har satt flyten til. Hvis du ikke definerer flytretning er standard row. Det betyr at elementene legger seg horisontalt over boksen. Dersom du endrer retning til column legger de seg i rekke fra toppen av boksen til bunnen. Du kan endre startpunkt, endre på rekkefølgen mv. på elementer som ligger på enten hovedaksen eller kryssaksen. Du kan også legge flexbox i en flexbox. </p>
+            <p>Alle barn av en flex container kan legges i enhver retning og kan også flekse størrelsen, de kan vokse for å fylle ubrukt rom eller krympe for å unngå å overflowe forelderen. Nesting av bokser – horisontalt på innsiden av en vertikal eks. kan brukes for å lage layouts i to dimensjoner. Dette gjør det enklere å skape en god layout for nettsiden.</p>
+            <p>Marginer på tilstøtende flex-elementer kollapser ikke, slik som de gjør når man bruker float for å skape layout. Auto marginer utvider seg for å bruke omkringliggende rom. Marginene kan brukes for å justere, eller skyve tilstøtende flex-elementer fra hverandre. </p>
+            <p>Flexbox skaper en mer responsiv nettside, som tilpasser seg i forhold til skjermstørrelsen den vises på, og hvor elementene fordeler seg jevnt slik du ønsker. Du kan også sette størrelsen på elementer i prosent slik at det ved eks. 30 % vil ligge tre elementer i bredden, uansett skjermstørrelse. </p>
+        </article>
+
+        <article>
+            <h2>Grid</h2>
+            <p>CSS grid deler opp siden i kolonner og rader. Grid brukes gjerne sammen med flex for å skape responsivt design som tilpasser seg de fleste skjermstørrelser og mediatyper. Vi definerer ønsket antall kolonner eller rader og så skapes det et rutenettverk som vi kan jobbe ut fra. Dette gjør det enklere å få elementene til å plassere seg der vi ønsker. I motsetning til eksempelvis float der man er avhengig av å sette marginer, paddinger og hele tiden passe på flyt/ikke-flyt for å plassere elementer ca. der man ønsker. Med grid har man mulighet til å plassere ut elementer helt spesifikt, både horisontalt og vertikalt.</p>
+            <p>Grid-systemet består av tre hovedkomponenter: containere, rader og kolonner. Når du setter display:grid på et foreldreelement blir dette en grid-container og direkte etterkommere av denne blir automatisk grid-elementer. I motsetning til flex-box er standard retning for grid kolonne. Det vil si at elementene legger seg på rekke nedover til de får annen informasjon.</p>
+            <p>Et grid er et sammensatt sett av horisontale og vertikale linjer. Elementer kan plasseres i rutenettet ut fra kolonne- og radlinjer, eller ved bruk av grid-area. Ved bruk av grid-area kan du gi celler, eller et område med flere celler, et navn som du kan bruke når du ønsker å fordele elementer. Størrelsen på cellene kan være både fikserte og fleksible. Hvis du ønsker at gridet skal være fleksibelt settes størrelsen til prosent eller fr. Størrelsesbegrepet fr er nytt med grid, og tilsvarer fraction, eller freespace. Hvis du for eksempel setter grid-template-colums: 1fr 1fr 1fr – får du tre kolonner som tar like mye av bredden, og de bruker den bredden som er tilgjengelig.Ved å bruke minmax() som størrelse på kolonnen/raden sørger du for at elementet vokser og krymper til et gitt minimums og maksimumsnivå. Setter du maks til auto betyr det at størrelsen ser på innholdet størrelse og strekker seg slik at det blir plass til alt innhold.</p>
+            <p>Når du oppretter et grid legger elementene seg automatisk i hver sin celle. Det er derfor du må gi de nye plasseringer for å skape den layouten du ønsker. Du posisjonerer i forhold til gridets linjer (mellom cellene), ved hjelp av grid-column-start, grid-column-end, grid-row-start og grid-row-end. Du kan sette elementer til å strekke seg (span) over flere kolonner eller rader. Eks for å få en navigasjon til å strekke seg over hele siden.</p>
+            <p>Ved å deklarere ønsket antall kolonner lager gridet automatisk så mange rader som er nødvendig for å inkludere alle etterkommere. Disse er automatiske og tilpasser seg innholdet. Du kan sette egenskaper for grid-auto-rows og -columns dersom du ønsker at også automatisk genererte rader og kolonner skal ha en gitt størrelse. Grid har også en innebygd algoritme for å kontrollere elementer som ikke er gitt en eksakt posisjonering i nettet, slik at hvis du legger elementer utenfor et deklarert grid legges det automatisk til rader og kolonner der det er nødvendig. </p>
+            <p>Grid gir mulighet for å sette mellomrom mellom områdene slik at du kan gi nettsiden et luftigere uttrykk. Ved bruk av column-gap og row-gap eller bare gap (for både vertikalt og horisontalt mellomrom) settes det til ønsket størrelse. Ethvert grid-element kan også bli en grid-container, slik kan vi ha grid i grid, akkurat som vi kan ha flex i flex. Etterkommere av et grid i et grid vil ikke være direkte barn av hovedgridet og deltar ikke i grid-layouten. </p>
+            <p>Et tips hvis du ønsker å se gridet i nettleseren er å bruke Firefox. Her gir inspeksjon av elementet muligheter for fysisk å se hvor gridet ligger, og viser deg hvilke linjer som er definert av deg, og hvilke som eventuelt er autogenererte. </p>
+        </article>
+
+    <footer>
+        <p>Anita Marie Torp</p>
+        <p><time datetime= "2018">2018</time></p> 
+        <p>Epost: <a href="mailto:anita.m.torp@hiof.no">anita.m.torp@hiof.no</a></p>  
+    </footer>
+</body>
+</html>

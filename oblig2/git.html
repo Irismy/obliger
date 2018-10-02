@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" media="print" href="print.css">
+    <link rel="stylesheet" media = "all" href="stil.css" type="text/css">
+
+    <title>webutvikling</title>
+</head>
+<body>
+    <header>
+        <h1>Webutvikling</h1>
+        <nav>
+            <a href="../index.html">Hjem</a>
+            <a href="git.html">Git/Github</a>
+            <a href="mediatyper.html">Mediatyper</a>
+            <a href="layouts.html">CSS Layouts</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Git</h2>
+            <p>
+                Det er vanlig å jobbe i store team når man jobber med utvikling. Uten system for versjonskontroll ville det vært tilnærmet umulig å samarbeide med andre om ett og samme prosjekt, særlig om de ulike utviklerne sitter på ulike steder i verden og i ulike tidssoner. Det finnes ulike verktøy for versjonskontroll, herunder Git.</p>
+            <p>Git er et versjonskontroll-verktøy som hjelper deg å holde orden på de filene som brukes i applikasjonen/prosjektet. Det kan ses på som et mini-filsystem, og er som en liten tidsmaskin ettersom den gir deg mulighet til å rulle tilbake til tidligere versjoner om du skulle ønske det. Det kan være veldig nyttig hvis programmet du jobber med plutselig ikke fungerer slik det gjorde tidligere, eller slik du hadde tenkt. </p>    
+            <p>De fleste operasjoner i Git trenger bare tilgang til lokale filer og ressurser. Du får hele historien til prosjektet på din egen disk og kan se igjennom historikk og endringer mellom nåværende og tidligere versjoner. Git ser på den gamle filen og kalkulerer forskjellen. </p>    
+            <p>Git arbeider i forhold til en tre-metafor – hvor du jobber på ulike grener (brancher) av prosjektet. En branch er en forgreining av versjonstreet. Det er en kopi av den originale grenen (master branch), hvor alle endringer du lager kun påvirker kopien, frem til du er fornøyd med kopien og ønsker å la den vokse sammen med master branch igjen. Da foretar du en merge og fletter kopien inn i master branch. 
+                Git er også den utgaven av versjonsstyring som også har gitt navn til kodedelingssiten Github.</p>    
+                </p>
+        </article>
+
+        <article>
+            <h2>GitHub</h2>
+            <p> GitHub er en web-basert hosting service for versjonskontroll ved bruk av Git. 
+                GitHub gjør det enklere for flere utviklere å jobbe med samme prosjekt samtidig, ved at det er mulig å kopiere koden til en egen gren og jobbe videre med denne, uten at det påvirker master-grenen (sluttproduktet). Ved å merge (norsk: slå sammen) den grenen du har jobbet med til master-grenen vil du få beskjed om det er andre endringer som er gjort – og mulighet til å gå gjennom dette for å se om det påvirker det du har jobbet med. Du kan også be andre utviklere om å se gjennom koden du har arbeidet med, før du eventuelt velger å merge den inn i master branch. </p>
+            <p>Når du skal organisere et prosjekt i GitHub er det vanlig å opprette et repository. Det er i dette repositoriet du lagrer prosjektet ditt. Et repository kan inneholde mapper og filer, bilder, videoer, datasett mv. – med andre ord; alt du trenger til prosjektet.  Det kan være en lokal mappe på pc’en, eller på en ekstern server, foreksempel hos GitHub. Ved å lagre prosjektet eksternt i GitHub kan man enklere jobbe flere på samme prosjekt og du kan jobbe med prosjektet uavhengig av enhet. Prosjektet ditt er trygt lagret og du kan hente ned prosjektet til den enheten du ønsker å jobbe på.</p>
+            <p>Som nevnt jobber Git ut fra en tre-metafor. Når du oppretter et repository dannes det en master branch for prosjektet. På siden av disse kan du opprette ulike brancher for å jobbe med deler av prosjektet – uten at det påvirker den opprinnelige koden. Brancher gjør det mulig å jobbe med flere forskjellige versjoner av et repository samtidig. </p>    
+            <p>Når du ønsker å legge en aktuell branch til master-branchen lager du en kopi av masteren slik den var på tidspunktet for sammenslåing. Dersom det er andre utviklere som har endret masteren samtidig som du jobbet på din branch kan du hente inn oppdateringer før du velger å merge.</p>    
+            <p>Du kan også velge å åpne en pull request. Da foreslår du endringer og ber om at noen andre ser på forslaget og hjelpe til. En pull request vil vise endring på innholdet fra begge brancher (den du har jobbet med, og master). Endringer, tillegg og fjernede tillegg vises i ulike farger og gjør det enkelt å få oversikt over endringer. Det er også et @mention-system i GitHub som gjør det mulig å be om tilbakemelding fra spesifikke personer eller team. </p>   
+            <p>Når du lagrer endringer til en branch oppretter du en commit. En commit er en lagret endring i GitHub. Hver commit har en melding som bør være en beskrivelse av hvorfor en endring er foretatt. Ved å se igjennom commit-meldinger får du enkelt oversikt over hvilke endringer som er gjort og hvorfor. </p>   
+            <p>Den vanskeligste delen av versjonskontroll er å samle endringer. Hvis det er konflikter mellom din branch og branchen du merger til vil ikke dette gjennomføres før det er tatt stilling til alle konflikter mellom filene. Ved konflikt markerer Git linjene det gjelder, slik at du enkelt kan finne frem til konfliktene og gå igjennom disse før du forsøker å commite igjen. Git tar ikke stilling til konfliktene, verktøyet ser kun at det er forskjell med versjonene og så er det opp til deg hvilke endringer som skal brukes. </p> 
+            <p>Det er helt klart fordeler ved å bruke et verktøy for versjonskontroll. Selv om jeg ikke har jobbet særlig lenge med webutvikling og koding har jeg flere ganger klødd meg i hodet og lurt på hva det var som skjedde etter at jeg gjorde endringer i koden. GitHub gir også en ekstra sikkerhet ved ekstern lagring, ettersom man ikke er avhengig av en spesifikk pc for å fortsette jobben. Foreløpig har jeg kun opprettet repository i forbindelse med denne obligen, men har intensjoner om å sette meg bedre inn i alle mulighetene og bruke verktøyet aktivt fremover.              
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>Anita Marie Torp</p>
+        <p><time datetime= "2018">2018</time></p> 
+        <p>Epost: <a href="mailto:anita.m.torp@hiof.no">anita.m.torp@hiof.no</a></p>  
+    </footer>
+</body>
+</html>

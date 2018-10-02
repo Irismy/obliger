@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" media="print" href="print.css">
+    <link rel="stylesheet" media = "all" href="stil.css" type="text/css">
+
+    <title>webutvikling</title>
+</head>
+<body>
+    <header>
+        <h1>Webutvikling</h1>
+        <nav>
+            <a href="../index.html">Hjem</a>
+            <a href="git.html">Git/Github</a>
+            <a href="mediatyper.html">Mediatyper</a>
+            <a href="layouts.html">CSS Layouts</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Mediatyper i CSS</h2>
+            <p>
+                Mediatyper i CSS brukes for å tilpasse designet til bruk på ulike typer medier. Da bruker du CSS for å gi brukeren en god opplevelse av siden uansett hva slags enhet den brukeren benytter. Følgende mediatyper kan defineres gjennom CSS. Jeg vil her se på de ulike typene. </p>
+            <p><span class= "mediatyper">All</span> – CSS som gjelder alle typer enheter/media. </p>    
+            <p><span class= "mediatyper">Screen</span> – spesielt tilpasset fargeskjermer. I dag er dette det vanligste formatet. Alt vi bruker når vi går på nettet er skjermer. Laptop, nettbrett, smarttelefon mv.  </p>    
+            <p><span class= "mediatyper">Print</span> – spesielt tilpasset utskrift. Det er kanskje den mediatypen, med unntak av screen, som er mest brukt i dag. Det benyttes i hovedsak samme type CSS-egenskaper som CSS for skjerm, men det er nyttig å tilpasse designet slik at utskriften blir god og lett lesbar. Typisk vil dette være fjerning av informasjon som ikke er nødvendig ved utskrift, som reklame o.l., Det er også vanlig å bruke en serif-font ved utskrift da det skal være mer lesevennlig på papir, i motsetning til på skjerm hvor det er vanlig å bruke en sans-serif skrifttype. Det er også nyttig for å gi informasjon til printeren om hvordan man ønsker siden satt opp ved utskrift og hvor sidene skal bryte.</p>
+            <p><span class= "mediatyper">Speech</span> – spesielt tilpasset skjermlesere. Gjør det blant annet mulig å velge om stemmen skal være mannlig eller kvinnelig, hvor stresset stemmen skal være, om det skal legges inn pauser i teksten mv.</p>    
+                </p> Vi har også:
+                    <ul>
+                        <li><span class= "mediatyper">Braille</span> – Tilpasset opphøyet tekst, eller blindeskrift. Antageligvis utviklet med tanke på leselister som blinde og svaksynte bruker for å kunne lese teksten på dataskjerm som punktskrift.</li>
+                        <li><span class= "mediatyper">Embossed</span> – Tilpasset for utskrift av blindeskrift.</li>
+                        <li><span class= "mediatyper">Handheld</span> – Tilpasset små skjermer, eller ved begrenset båndvidde.</li>
+                        <li><span class= "mediatyper">Projection</span> – Tilpasset fremvisning.</li>
+                        <li><span class= "mediatyper">Tty</span>– Tilpasset enheter med fast tegn-sett. Type terminaler eller bærbare enheter med lite display.</li>
+                        <li><span class= "mediatyper">Tv</span> – Tilpasset tv. I CSS spesifikasjonene står det at dette vil gjelde tv-enheter med lav oppløsning, begrensede muligheter for scrolling mv.</li>
+                    </ul>
+                <p>Historisk sett har det vært lite nettleser-støtte for de ulike mediatypene, med unntak av print. Dette, og det faktum at det er mye arbeid å utarbeide flere ulike stilsett, kan være en ulempe for utvikler. På den annen side er du sikker på, såfremt nettleseren støtter det, at alle tenkelige brukere av nettsiden er garantert en god opplevelse.</p>
+                <p>Med utviklingen av regler for responsivt design og tilgjengelighet har de fleste medietypene utspilt sin rolle. Ved hjelp av eksempelvis flex-box og grid kan man lage ett design som vil være responsivt gi en god brukeropplevelse på de fleste skjermstørrelser og oppløsninger, og det er det ikke lenger et like stort behov for å definere egne stilsett for eksempelvis tv, prosjektor og håndholdt. HTML5 bruker også semantiske tagger som gjør sidens innhold lesbart for nettleseren, og sørger for bedret tilgjengelighet også for svaksynte og blinde.</p>
+        </article>
+    </main>    
+
+    <footer>
+        <p>Anita Marie Torp</p>
+        <p><time datetime= "2018">2018</time></p> 
+        <p>Epost: <a href="mailto:anita.m.torp@hiof.no">anita.m.torp@hiof.no</a></p>  
+    </footer>
+</body>
+</html>
